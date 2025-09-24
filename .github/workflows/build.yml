@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: macos-latest
+          - os: macos-latest-large
             arch: x64  # 选择 x64 架构
     steps:
       - name: Checkout code
