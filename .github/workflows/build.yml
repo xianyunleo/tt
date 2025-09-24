@@ -17,8 +17,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Print actual architecture
+      - name: Print architecture from matrix
         run: |
           echo "Running on macOS"
+          echo "The architecture from the matrix is: ${{ matrix.arch }}"
+          
+      - name: Print actual architecture of the system
+        run: |
           arch_output=$(uname -m)  # 获取当前机器的架构
-          echo "The architecture of the current macOS is: $arch_output"
+          echo "The actual architecture of the current macOS is: $arch_output"
